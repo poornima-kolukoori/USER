@@ -1,0 +1,5 @@
+D:\PRACTICE_WEEK\20-7-2016\Leave_Tracking_System\adodotnet\bin\Debug\adodotnet.dll
+D:\PRACTICE_WEEK\20-7-2016\Leave_Tracking_System\adodotnet\bin\Debug\adodotnet.pdb
+D:\PRACTICE_WEEK\20-7-2016\Leave_Tracking_System\adodotnet\obj\Debug\adodotnet.csprojResolveAssemblyReference.cache
+D:\PRACTICE_WEEK\20-7-2016\Leave_Tracking_System\adodotnet\obj\Debug\adodotnet.dll
+D:\PRACTICE_WEEK\20-7-2016\Leave_Tracking_System\adodotnet\obj\Debug\adodotnet.pdb

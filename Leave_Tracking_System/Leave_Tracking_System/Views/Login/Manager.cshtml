@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Manager";
+}
+
+<h2>Manager</h2>
+@using (Html.BeginForm())
+{
+    //List<SelectListItem> items = new List<SelectListItem>();
+    //items.Add(new SelectListItem
+    //{
+    //    Text = "Casual Leave",
+    //    Value = "1"
+    //});
+    //items.Add(new SelectListItem
+    //{
+    //    Text = "General Leave",
+    //    Value = "2",
+    //    Selected = true
+    //});
+    //items.Add(new SelectListItem
+    //{
+    //    Text = "Special Leave",
+    //    Value = "3"
+    //});
+    //items.Add(new SelectListItem
+    //{
+    //    Text = "Other Leave",
+    //    Value = "4"
+    //});
+    //ViewData["items"] = items;
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Login Screen</legend>
+
+        @Html.Label("Employee ID")
+        @Html.TextBox("txtEmpId", "")
+
+        @Html.Label("Employee Name")
+        @Html.TextBox("txtEmpName", "")
+
+     
+        <input type="Submit" name="Approve" value="Approve" /> 
+        <input type="Submit" name="reject" value="Reject" />  
+        <input type="submit" name="next" value="Next" />
+        <br />
+        <input type="submit" value="Submit" name="btnSubmit" />
+    </fieldset>
+}

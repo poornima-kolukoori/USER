@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Leave";
+}
+
+<h2>Leave</h2>
+
+    @using (Html.BeginForm())
+{
+    int a = Convert.ToInt16(Session["empId"]);
+    string name = (string)Session["empName"];
+    List<SelectListItem> items = new List<SelectListItem>();
+    items.Add(new SelectListItem
+    {
+        Text = "Casual Leave",
+        Value = "1"
+    });
+    items.Add(new SelectListItem
+    {
+        Text = "General Leave",
+        Value = "2",
+        Selected = true
+    });
+    items.Add(new SelectListItem
+    {
+        Text = "Special Leave",
+        Value = "3"
+    });
+    items.Add(new SelectListItem
+    {
+        Text = "Other Leave",
+        Value = "4"
+    });
+    ViewData["items"]=items;
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+        
+<fieldset>
+        <legend>Login Screen</legend>
+    
+    @Html.Label("Employee ID")
+    @Html.TextBox("txtEmpId", a)
+
+    @Html.Label("Employee Name")
+    @Html.TextBox("txtEmpName", name)
+
+    @Html.Label("Starting Date")
+    <input type="date" name="txtStrDt" />
+   
+    @Html.Label("Ending Date")
+    <input type="date" name="txtEndDt" />
+
+    @Html.Label("Type of Leave")
+    @Html.DropDownList("items")
+    <br />
+    <input type="submit" value="Submit" name="btnSubmit" />
+    </fieldset>
+}

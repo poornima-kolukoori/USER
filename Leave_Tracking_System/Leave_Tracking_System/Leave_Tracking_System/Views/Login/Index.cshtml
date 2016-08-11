@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Login Screen</legend>
+
+        @Html.Label("Email ID")
+        @Html.TextBox("txtMail","")
+
+        @Html.Label("Password")
+        @Html.Password("txtPswd","")
+        <br />
+        <input type="submit" value="Submit" name="btnSubmit" />
+    </fieldset>
+}
